@@ -1,0 +1,257 @@
+/*start main Rulez*/
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;700&display=swap");
+* {
+
+    box-sizing: border-box;
+  }
+
+body
+{
+  height:auto;
+}
+
+p {font-size: 20px;}
+
+.clearfix {clear:both;}
+
+/*End main Rulez*/
+
+
+/*start my framework*/
+
+.my-button 
+{
+  background:none;
+  border:3px solid #2DCC70;
+  padding:10px 30px;
+  color:#2DCC70;
+  font-weight:bold;
+}
+
+.fl-left {float:left}
+
+p {line-height:1.7;color:#888;}
+
+h2,h3 {color:#777}
+
+.text-center {text-align:center;}
+
+/*end my framework*/
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+/*           start footer         */
+
+/* Footer Styles */
+
+footer {
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #ffd365, #019267);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  /* Class: .footer */
+  .footer {
+    background-color: #222;
+    padding-top: 10px;
+    color: #fff;
+  }
+  
+  /* Class: .top-footer */
+  .top-footer {
+    padding: 20px 0;
+  }
+  
+  /* Class: .container */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  
+  /* Class: .container.md\:grid-cols-2 */
+  .container.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Class: .container.lg\:grid-cols-4 */
+  .container.lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Class: .logo */
+  .logo {
+    margin-top: -37px;
+    width: 120px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Class: .top-footer p */
+  .top-footer p {
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  /* Class: .top-footer h2 */
+  .top-footer h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Class: .top-footer ul */
+  .top-footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Class: .top-footer ul li */
+  .top-footer ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Class: .top-footer ul a */
+  .top-footer ul a {
+      color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Instagram feed styles */
+  
+  /* Class: .grid-cols-3 */
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Class: .overflow-hidden */
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  /* Class: .top-footer img */
+  .top-footer img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, rotate 0.3s ease, filter 0.3s ease;
+}
+  
+/* Class: .top-footer img:hover */
+.top-footer img:hover {
+    transform: scale(1.25) rotate(3deg);
+    filter: brightness(1.25);
+  }
+  
+  /* Contact Info styles */
+  
+  /* Class: .top-footer ul.text-xs */
+  .top-footer ul.text-xs {
+    font-size: 0.75rem;
+  }
+  
+  /* Class: .top-footer ul i */
+  .top-footer ul i {
+    margin-right: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Bottom Footer styles */
+  
+  /* Class: .bottom-footer */
+  .bottom-footer {
+    padding: 2px 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Class: .bottom-footer a.text-mainColor */
+  .bottom-footer a.text-mainColor {
+    color:  #019267; /* Change to your main color */
+    text-decoration: none;
+  }
+  /*end footer*/
+
+
+  /*
+ 
+  
+  .contact {background-color:#1E6F5C;overflow:hidden;height:800px;padding-top:50px;padding-bottom:70px;}
+  
+  .contact .info {color:#ffffff;margin-right:5%;display: flex; }
+  
+  .contact .info p {color:white;margin-left:40px;}
+  
+  .contact .info p strong {color:#D1D6DA}
+  
+  .contact .info h2 {color:#FFF;margin-left:40px;}
+  
+  .contact .form {width:45%;color:#D1D6DA; }
+  
+  .contact .form label {display:block;margin:20px 0;}
+  
+  .contact .form input[type="text"] {background-color:#4B5557;color:#FFF;padding:10px;border:0;width:94%;}
+  
+  .contact .form textarea {background-color:#4B5557;color:#FFF;padding:10px;border:0;width:94%;height:300px;}
+  
+  .contact .form input[type="submit"] {background-color:#191E22;color:#FFF;padding:10px;border:0;margin-top:10px;}
+  
+  
+
+  */

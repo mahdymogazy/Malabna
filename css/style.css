@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: 0;
+  -webkit-box-sizing: 0;
+}
+body {
+  font-family: 'Tajawal', sans-serif;
+  overflow-x: hidden !important;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  margin-top: -37px;
+  width: 120px;
+  transition: all 0.3s ease;
+}
+
+header {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+}
+header .brand {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-decoration: none;
+  margin: 0;
+  display: block;
+  margin: 0 0 0 30px;
+  width: 170px;
+  height: 45px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-color: #289672;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+header .brand:hover {
+    translate: 0.5rem;
+    transform: translate(0, 0)
+      rotate(0) skewX(0) skewY(0)
+      scaleX(1) scaleY(1);
+  background-color: #ffd365;
+  color: #fff;
+}
+header .navigation {
+  position: relative;
+}
+header .navigation .navigation-items a {
+  position: relative;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before {
+  width: 100%;
+}
+section {
+  padding: 100px 200px;
+}
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #289672;
+}
+.home:before {
+  z-index: 777;
+  content: '';
+  position: absolute;
+  background: rgba(41, 187, 137, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.home .content {
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+  display: none;
+}
+.home .content.active {
+  display: block;
+}
+.home .content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+.home .content h1 span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.home .content p {
+  margin-bottom: 56px;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.home .content a {
+  background: white;
+  padding: 15px 35px;
+  color: #289672;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.home .content .h:hover {
+  background-color: #ffd365;
+}
+.home .media-icons {
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+.home .media-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.home .media-icons a:hover {
+  transform: scale(1.3);
+  color: #ffd365;
+}
+.home video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+  margin-right: 20px;
+}
+.slider-navigation .nav-btn.active {
+  background: #289672;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.video-slide {
+  position: absolute;
+  width: 100%;
+  clip-path: circle(50% at 0 50%);
+}
+
+.video-slide.active {
+  clip-path: circle(150% at 50% 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+/* Main Style */
+/* About Section */
+.about {
+  position: relative;
+  padding-top: 10px; /* Equivalent to py-14 in Tailwind CSS */
+  min-height: 60vh; /* Equivalent to md:min-h-[60vh] in Tailwind CSS */
+  display: grid;
+}
+
+#about {
+  margin-top: -100px; /* Adjust the margin as needed */
+}
+
+.about img .first {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  transform: scale(0.75);
+}
+.about img .second {
+  position: absolute;
+  left: 33.3333%; /* Equivalent to left-1/3 in Tailwind CSS */
+  top: 75%; /* Equivalent to top-3/4 in Tailwind CSS */
+  transform: scale(0.75);
+}
+.a {
+  padding: 1.25rem; /* Equivalent to px-5 in Tailwind CSS */
+  display: grid;
+  grid-template-columns: 1fr; /* Equivalent to grid-cols-1 in Tailwind CSS */
+  justify-content: space-between; /* Equivalent to justify-between in Tailwind CSS */
+  align-items: center; /* Equivalent to items-center in Tailwind CSS */
+  gap: 1.5rem; /* Equivalent to gap-6 in Tailwind CSS */
+  position: relative;
+  z-index: 10;
+}
+.a img{
+  max-width: 100%; /* Ensure the image does not exceed its container's width */
+  height: 400px; /* Automatically adjust the height to maintain aspect ratio */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px; /* Add a rounded border to the image (adjust as needed) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow (adjust as needed) */
+  max-width: 600px;
+}
+.a img:hover{
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+
+}
+
+.b {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Equivalent to gap-5 in Tailwind CSS */
+  align-items: flex-start;
+}
+.text-mainColor {
+  --tw-text-opacity: 1;
+  color: rgb(255 114 20 / var(--tw-text-opacity));
+  font-size: 20pt;
+}
+.c {
+  font-size: 1.5rem; /* Equivalent to "text-2xl" in Tailwind CSS */
+  font-weight: 700; /* Equivalent to "font-bold" in Tailwind CSS */
+  line-height: 1.5; /* Equivalent to "leading-normal" in Tailwind CSS */
+}
+/* Define the class "d" */
+.d {
+  color: #333; /* Equivalent to "text-gray-800" in Tailwind CSS */
+  font-weight: 600; /* Equivalent to "font-medium" in Tailwind CSS */
+  font-size: 15pt;
+}
+.e {
+  color: #718096;
+}
+.main-btn {
+  border-radius: 1.5rem;
+  background-color: #289672;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.main-btn:hover {
+  translate: 0.5rem;
+  transform: translate(0, 0)
+    rotate(0) skewX(0) skewY(0)
+    scaleX(1) scaleY(1);
+  background-color: #ffd365;
+}
+/* Feathers Style */
+#features {
+  margin-top: -100px; /* Adjust the margin as needed */
+}
+.f {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(0.75); /* Equivalent to scale-75 in Tailwind CSS */
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.g {
+  text-align: center; /* Equivalent to text-center in Tailwind CSS */
+  margin-bottom: 1.25rem; /* Equivalent to mb-5 in Tailwind CSS */
+}
+.h {
+  font-weight: bold; /* Equivalent to font-bold in Tailwind CSS */
+  font-size: 1.5rem; /* Equivalent to text-2xl in Tailwind CSS */
+}
+/* Define the class name 'i' and apply the 'content' styles */
+.i {
+  width:100%;
+  display: grid; /* Equivalent to grid in Tailwind CSS */
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* Equivalent to grid-cols-1 in Tailwind CSS */
+  gap: 1.25rem; /* Equivalent to gap-5 in Tailwind CSS */
+}
+
+.card {
+  width:100%;
+  display:grid;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  padding: 1rem;
+  text-align: center;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.card:hover {
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+/* Define the class name 'j' and apply the 'group-hover' styles */
+.j:hover {
+  transform: scale(1.25); /* Equivalent to group-hover:scale-125 in Tailwind CSS */
+  transition: all 0.3s; /* Equivalent to transition-all duration-300 in Tailwind CSS */
+}
+
+/* Define the class name 'k' and apply the 'font-bold' and 'text-lg' styles */
+.k {
+  font-weight: bold; /* Equivalent to font-bold */
+  font-size: 1.125rem; /* Equivalent to text-lg */
+}
+
+/* Define the class name 'm' and apply the 'absolute right-0 md:right-10 top-1/4 scale-75' styles */
+.m {
+  position: absolute; /* Equivalent to 'absolute' in Tailwind CSS */
+  right: 0; /* Equivalent to 'right-0' in Tailwind CSS */
+  top: 25%; /* Equivalent to 'top-1/4' in Tailwind CSS */
+  transform: scale(0.75); /* Equivalent to 'scale-75' in Tailwind CSS */
+}
+/* Define the class name 'n' and apply the 'absolute left-1/3 top-3/4 scale-75' styles */
+.n {
+  position: absolute; /* Equivalent to 'absolute' in Tailwind CSS */
+  left: 33.3333%; /* Equivalent to 'left-1/3' in Tailwind CSS */
+  top: 75%; /* Equivalent to 'top-3/4' in Tailwind CSS */
+  transform: scale(0.75); /* Equivalent to 'scale-75' in Tailwind CSS */
+}
+
+
+/* Playground Style */
+#playground {
+  margin-top: -100px; /* Adjust the margin as needed */
+}
+
+.o {
+  text-align: center; /* Equivalent to 'text-center' in Tailwind CSS */
+  margin-bottom: 1.25rem; /* Equivalent to 'mb-5' in Tailwind CSS */
+}
+/* Define the class name 'o' and apply the 'font-bold' and 'text-2xl' styles */
+.p {
+  font-weight: bold; /* Equivalent to 'font-bold' in Tailwind CSS */
+  font-size: 1.5rem; /* Equivalent to 'text-2xl' in Tailwind CSS */
+}
+
+/* Define the class name 'q' and apply the 'text-2xl md:text-2xl font-bold leading-normal' styles */
+.q {
+  font-size: 1.5rem; /* Equivalent to 'text-2xl' in Tailwind CSS */
+  font-weight: bold; /* Equivalent to 'font-bold' in Tailwind CSS */
+  line-height: 1.5; /* Equivalent to 'leading-normal' in Tailwind CSS */
+}
+/* Define the class name 'r' and apply the 'grid gap-5' style */
+.r {
+  display: grid; /* Equivalent to 'grid' in Tailwind CSS */
+  gap: 1.25rem; /* Equivalent to 'gap-5' in Tailwind CSS */
+}
+/* Define the class name 's' and apply the specified styles */
+.s {
+  padding-left:6000px;
+  padding: 1.25rem; /* Equivalent to 'px-5' in Tailwind CSS */
+  display: grid; /* Equivalent to 'grid' in Tailwind CSS */
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* Equivalent to 'grid-cols-1' in Tailwind CSS */
+  gap: 2rem; /* Equivalent to 'gap-8' in Tailwind CSS */
+  justify-content: space-between; /* Equivalent to 'justify-between' in Tailwind CSS */
+  align-items: center; /* Equivalent to 'items-center' in Tailwind CSS */
+  position: relative; /* Equivalent to 'relative' in Tailwind CSS */
+  z-index: 10; /*Equivalent to 'z-10' in Tailwind CSS */
+}
+/* Define the class name 't' and apply the specified styles */
+.t {
+  padding-left: 5rem; /* Equivalent to 'md:pl-20' in Tailwind CSS */
+  display: flex; /* Equivalent to 'flex' in Tailwind CSS */
+  flex-direction: column; /* Equivalent to 'flex-col' in Tailwind CSS */
+  gap: 1.25rem; /* Equivalent to 'gap-5' in Tailwind CSS */
+  align-items: flex-start; /* Equivalent to 'items-start' in Tailwind CSS */
+}
+.s img{
+  max-width: 100%; /* Ensure the image does not exceed its container's width */
+  height: 400px; /* Automatically adjust the height to maintain aspect ratio */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px; /* Add a rounded border to the image (adjust as needed) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow (adjust as needed) */
+  max-width: 580px;
+}
+.s img:hover{
+  /* transform: scale(1.05); */
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+}
+.second-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+/* Define the class name 'u' and apply the 'analytics relative py-10 bg-secondColor' styles */
+.u {
+  position: relative; /* Equivalent to 'relative' in Tailwind CSS */
+  padding-top: 2.5rem; /* Equivalent to 'py-10' in Tailwind CSS */
+  background-color: #289672; /* Replace 'yourSecondColor' with the actual color value */
+}
+/* Define the class name 'v' and apply the 'grid grid-cols-1 md:grid-cols-4 gap-3' styles */
+.v {
+  display: grid; /* Equivalent to 'grid' in Tailwind CSS */
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* Equivalent to 'grid-cols-1' in Tailwind CSS */
+  gap: 0.75rem; /* Equivalent to 'gap-3' in Tailwind CSS */
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+/* Define the class name 'w' and apply the 'flex flex-col items-center gap-3' styles */
+.w {
+  display: flex; /* Equivalent to 'flex' in Tailwind CSS */
+  flex-direction: column; /* Equivalent to 'flex-col' in Tailwind CSS */
+  align-items: center; /* Equivalent to 'items-center' in Tailwind CSS */
+  gap: 0.75rem; /* Equivalent to 'gap-3' in Tailwind CSS */
+  
+}
+.aa:hover,
+.z:hover,
+.w:hover{
+  transform: scale(1.05);
+  color: #ffd365;
+ 
+}
+/* Define the class name 'x' and apply the 'w-10 h-10' styles */
+.x {
+  width: 2.5rem; /* Equivalent to 'w-10' in Tailwind CSS */
+  height: 2.5rem; /* Equivalent to 'h-10' in Tailwind CSS */
+}
+/* Define the class name 'x' and apply the 'text flex items-center gap-2 text-white' styles */
+.y {
+  display: flex; /* Equivalent to 'flex' in Tailwind CSS */
+  gap: 0.5rem; /* Equivalent to 'gap-2' in Tailwind CSS */
+}
+/* Define the class name 'z' and apply the 'number md:text-xl font-bold' styles */
+.z {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.25rem; /* Equivalent to 'md:text-xl' in Tailwind CSS */
+  font-weight: bold; /* Equivalent to 'font-bold' in Tailwind CSS */
+}
+
+/* Define the class name 'aa' and apply the 'desc text-sm capitalize' styles */
+.aa {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1rem; /* Equivalent to 'text-sm' in Tailwind CSS  */
+  text-transform: capitalize; /* Equivalent to 'capitalize' in Tailwind CSS */
+}
+/* Define the class name 'bb' and apply the 'py-10' style */
+.bb {
+  padding-top: 2.5rem; /* Equivalent to 'py-10' in Tailwind CSS */
+  padding-bottom: 2.5rem; /* Equivalent to 'py-10' in Tailwind CSS */
+}
+
+.relative {
+  position: relative;
+}
+/* Define the class name 'bb' and apply the 'absolute w-full inset-0 opacity-50 bg-slate-800' styles */
+.cc {
+  position: absolute; /* Equivalent to 'absolute' in Tailwind CSS */
+  width: 100%; /* Equivalent to 'w-full' in Tailwind CSS */
+  top: 0; /* Equivalent to 'inset-0' in Tailwind CSS */
+  right: 0; /* Equivalent to 'inset-0' in Tailwind CSS */
+  bottom: 0; /* Equivalent to 'inset-0' in Tailwind CSS */
+  left: 0; /* Equivalent to 'inset-0' in Tailwind CSS */
+  opacity: 0.5; /* Equivalent to 'opacity-50' in Tailwind CSS */
+  background-color: #374151; /* Replace with the desired color */
+}
+/* Define the class name 'dd' and apply the specified styles */
+.dd {
+  display: grid; /* Equivalent to 'grid' in Tailwind CSS */
+  place-items: center; /* Equivalent to 'place-items-center' in Tailwind CSS */
+  gap: 1.25rem; /* Equivalent to 'gap-5' in Tailwind CSS */
+  color: #ffffff; /* Equivalent to 'text-white' in Tailwind CSS */
+  position: absolute; /* Equivalent to 'absolute' in Tailwind CSS */
+  top: 50%; /* Equivalent to 'top-1/2' in Tailwind CSS */
+  left: 50%; /* Equivalent to 'left-1/2' in Tailwind CSS */
+  transform: translateX(-50%) translateY(-50%); /* Equivalent to '-translate-x-1/2 -translate-y-1/2' in Tailwind CSS */
+}
+/* Define the class name 'dd' and apply the specified styles */
+.ee {
+  cursor: pointer; /* Equivalent to 'cursor-pointer' in Tailwind CSS */
+  transition: filter 0.3s; /* Hover transition for brightness effect */
+  background-color: #289672; /* Replace 'yourMainColor' with the actual color value */
+  width: 3.5rem; /* Equivalent to 'w-14' in Tailwind CSS */
+  height: 3.5rem; /* Equivalent to 'h-14' in Tailwind CSS */
+  display: grid; /* Equivalent to 'grid' in Tailwind CSS */
+  place-items: center; /* Equivalent to 'place-items-center' in Tailwind CSS */
+  border-radius: 9999px; /* Equivalent to 'rounded-full' in Tailwind CSS */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 12px rgba(0, 0, 0, 0.1); /* Equivalent to 'shadow-2xl shadow-mainColor' in Tailwind CSS */
+}
+
+/* Hover state for brightness effect */
+.ee:hover {
+  filter: brightness(1.25); /* Equivalent to 'hover:brightness-125' in Tailwind CSS */
+}
+/* Define the class name 'ee' and apply the specified styles */
+.ff {
+  display: flex; /* Equivalent to 'flex' in Tailwind CSS */
+  flex-direction: column; /* Equivalent to 'flex-col' in Tailwind CSS */
+  padding-left: 1.25rem; /* Equivalent to 'px-5' in Tailwind CSS */
+  padding-right: 1.25rem; /* Equivalent to 'px-5' in Tailwind CSS */
+  position: relative; /* Equivalent to 'relative' in Tailwind CSS */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .about img .first {
+    right: 10px;
+  }
+  .about img .second {
+    left: 10%; /* Adjust the left position for medium-sized screens */
+    top: 50%; /* Adjust the top position for medium-sized screens */
+    transform: scale(1);
+  }
+  .a {
+    padding: 0; /* Equivalent to md:p-0 in Tailwind CSS */
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Equivalent to md:grid-cols-2 in Tailwind CSS */
+  }
+  .b {
+    padding-right: 1.25rem;
+  }
+  .c {
+    font-size: 2.25rem; /* Equivalent to "md:text-4xl" in Tailwind CSS */
+  }
+    .f {
+    left: 10px; /* Equivalent to md:left-10 in Tailwind CSS */
+  }
+  .container {
+    max-width: 768px;
+  }
+  .i {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Equivalent to md:grid-cols-2 in Tailwind CSS */
+  }
+  .m {
+    right: 10px; /* Equivalent to 'md:right-10' in Tailwind CSS */
+  }
+  .q {
+    font-size: 1.5rem; /* Equivalent to 'md:text-2xl' in Tailwind CSS */
+  }
+  .s {
+    padding: 0; /* Equivalent to 'md:p-0' in Tailwind CSS */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Equivalent to 'md:grid-cols-2' in Tailwind CSS */
+  }
+  .v {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Equivalent to 'md:grid-cols-4' in Tailwind CSS */
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 12px 20px;
+  }
+  section {
+    padding: 100px 20px;
+  }
+  .home .media-icons {
+    right: 15px;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .navigation.active {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+  header .navigation .navigation-items a {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+  header .navigation .navigation-items a:before {
+    background: #222;
+    height: 5px;
+  }
+  header .navigation.active .navigation-items {
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    margin: 20;
+    padding: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(1 1 1 /20%);
+  }
+
+  .menu-btn {
+    background: url(images/menu.png) no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: block;
+  }
+  .menu-btn.active {
+    z-index: 999;
+    background: url(images/close.png) no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+  }
+  .i {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Equivalent to lg:grid-cols-4 in Tailwind CSS */
+  }
+}
+
+
+
+
+
+/* Footer Styles */
+
+footer {
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to right, #ffd365, #019267);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/* Class: .footer */
+.footer {
+  background-color: #222;
+  padding-top: 10px;
+  color: #fff;
+}
+
+/* Class: .top-footer */
+.top-footer {
+  padding: 20px 0;
+}
+
+/* Class: .container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+/* Class: .container.md\:grid-cols-2 */
+.container.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Class: .container.lg\:grid-cols-4 */
+.container.lg\:grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Class: .logo */
+.logo {
+  margin-top: -37px;
+  width: 200px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+/* Class: .top-footer p */
+.top-footer p {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Class: .top-footer h2 */
+.top-footer h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 25px;
+}
+
+/* Class: .top-footer ul */
+.top-footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Class: .top-footer ul li */
+.top-footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Class: .top-footer ul a */
+.top-footer ul a {
+  color: #fff;
+  text-decoration: none;
+}
+.top-footer ul a:hover{
+  color: #ffd365;
+}
+/* Instagram feed styles */
+
+/* Class: .grid-cols-3 */
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Class: .overflow-hidden */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Class: .top-footer img */
+.top-footer img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, rotate 0.3s ease, filter 0.3s ease;
+  border-radius: 50%;
+}
+
+/* Class: .top-footer img:hover */
+.top-footer img:hover {
+  transform: scale(1.25) rotate(3deg);
+  filter: brightness(1.25);
+}
+
+/* Contact Info styles */
+
+/* Class: .top-footer ul.text-xs */
+.top-footer ul.text-xs {
+  font-size: 0.75rem;
+
+}
+
+
+/* Class: .top-footer ul i */
+.top-footer ul i {
+  margin-right: 0.25rem;
+  font-size: 0.875rem;
+  color: #ffd365;
+}
+
+
+/* Bottom Footer styles */
+
+/* Class: .bottom-footer */
+.bottom-footer {
+  padding: 2px 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  color: #fff;
+}
+
+/* Class: .bottom-footer a.text-mainColor */
+.bottom-footer a.text-mainColor {
+  color:  #019267; /* Change to your main color */
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  overflow-x: hidden !important;
+  scroll-margin-top: 60px;
+}
+
+nav.active {
+  background: #e5e7eb;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  position: fixed;
+  z-index: 10;
+}
+
+nav.active ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

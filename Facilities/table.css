@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* padding: 10px; */
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #289672; */
+  background-image: url('../project/imgs/bc3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/* Start side bar */
+.brand-name {
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  transform: translate(-20%, 15%);
+}
+
+.h_navi {
+  height: 100%;
+  width: 362px;
+  position: fixed;
+  background-color: #1e6f5c;
+  transition: 0.2s;
+}
+
+.h_navi ul {
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: #1e6f5c; */
+}
+
+.h_navi ul li {
+  list-style: none;
+  transform: translate(0%, 150%);
+  width: 88%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  font-size: 24px;
+  color: white;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.h_navi ul li:hover {
+  background: white;
+  border-radius: 20px 0px 0px 20px;
+  color: #1e6f5c;
+}
+
+.h_navi ul li:nth-child(1) {
+  pointer-events: none;
+  margin-bottom: 40px;
+}
+
+.h_navi ul li a {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+}
+
+.h_navi ul li a .h_icon {
+  text-align: center;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+}
+
+.h_navi ul li a .h_Title {
+  padding: 0 10px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  height: 60px;
+  font-size: 20px;
+  color: #b9bbb6;
+  line-height: 60px;
+}
+
+
+
+
+/* End side bar */
+.containerowner {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 100px;
+
+}
+table {
+  
+  margin-top: 90px;
+  margin-left: 530px;
+  width: 300px;
+
+} 
+
+.table-green th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+td {
+  text-align:center;
+}

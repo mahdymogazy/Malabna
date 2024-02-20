@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    background-image: url('../imgs/bc3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+}
+
+/* .container {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+} */
+.container .header {
+    position: absolute;
+    right: 2px;
+    width: 81vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container .header .nav {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.container .header .nav .search {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.container .header .nav .search input[type=text] {
+    border: none;
+    background: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+    outline: none;
+    border: none;
+}
+
+.container .content {
+    position: fixed;
+    margin-top: 10vh;
+    min-height: 90vh;
+    right: 500px;
+    width: 60%;
+}
+
+.btn-add-reservation {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 10%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.btn-add-reservation:hover {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 10%;
+}
+
+/* Start side bar */
+.brand-name {
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    transform: translate(-20%, 15%);
+}
+
+.h_navi {
+    height: 100%;
+    width: 362px;
+    position: fixed;
+    background-color: #1e6f5c;
+    transition: 0.2s;
+}
+
+.h_navi ul {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.h_navi ul li {
+    list-style: none;
+    transform: translate(0%, 150%);
+    width: 88%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 24px;
+    color: white;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.h_navi ul li:hover {
+    background: white;
+    color: #f9d509;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.h_navi ul li:nth-child(1) {
+    pointer-events: none;
+    margin-bottom: 40px;
+}
+
+.h_navi ul li a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+.h_navi ul li a .h_icon {
+    text-align: center;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+}
+
+.h_navi ul li a .h_Title {
+    padding: 0 10px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    height: 60px;
+    font-size: 20px;
+    color: #b9bbb6;
+    line-height: 60px;
+}
+
+.h_navi ul li a .h_icon:hover,
+.h_navi ul li a .h_Title:hover {
+    color: #1e6f5c;
+}
+
+/* End side bar */
+/* start table */
+table {
+    margin-left: 350px;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 5%;
+    /* background-color: #f1f1f1; */
+}
+
+
+.table-green th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+td {
+    color: black;
+    text-align: center;
+}
